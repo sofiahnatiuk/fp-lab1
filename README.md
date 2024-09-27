@@ -65,7 +65,7 @@ CL-USER>  (listp a)
 T
 CL-USER> (listp 2)
 NIL
-CL-USER>CL-USER> (eq 'a 'a)
+CL-USER>(eq 'a 'a)
 T
 CL-USER> (eq a a)
 T
