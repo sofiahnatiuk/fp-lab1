@@ -91,14 +91,14 @@ CL-USER> (last b)
 ((D 4))
 CL-USER> (append b (list (last b)))
 (2 C 3 NIL (D 4) ((D 4)))
-```
+``` 
 ## Варіант 5
 <p align="center">
 <img src="lab-5-variant.png">
 </p>
-```lisp
+```lisp 
 CL-USER> (set 'mylist '(4 e f))
 (4 E F)
 CL-USER> (list 'd mylist 5 (last mylist))
 (D (4 E F) 5 (F))
-```
+``` 
