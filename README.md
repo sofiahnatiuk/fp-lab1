@@ -100,6 +100,6 @@ CL-USER> (append b (list (last b)))
 ```lisp 
 CL-USER> (set 'mylist '(4 e f))
 (4 E F)
-CL-USER> (list 'd mylist 5 (last mylist))
-(D (4 E F) 5 (F))
+CL-USER>  (list 'd mylist (list 5) (last mylist))
+(D (4 E F) (5) (F))
 ``` 
