@@ -41,7 +41,56 @@
 Об'єднайте створений список з одним із його непустих підсписків. Для цього
 використайте функцію APPEND.
 ```lisp
-<тут має бути лістинг (текст) виконання загального завдання>
+CL-USER> (defvar a nil)
+A
+CL-USER> (setq a (cons 'b (list 4 2 (list 2 3 ()))))
+(B 4 2 (2 3 NIL))
+CL-USER> (car a)
+B
+CL-USER> (cdr a)
+(4 2 (2 3 NIL))
+CL-USER> (third a)
+2
+CL-USER> (last a)
+((2 3 NIL))
+CL-USER>  (atom 2)
+T
+CL-USER> (atom 'b)
+T
+CL-USER> (atom nil)
+T
+CL-USER> (listp nil)
+T
+CL-USER>  (listp a)
+T
+CL-USER> (listp 2)
+NIL
+CL-USER>CL-USER> (eq 'a 'a)
+T
+CL-USER> (eq a a)
+T
+CL-USER>(eq (car a) (car a))
+T
+CL-USER> (eq (car a) (third a))
+NIL
+CL-USER> (eql (car a) (last a))
+NIL
+CL-USER> (eql (car a) (third a))
+NIL
+CL-USER> (equal (car a) 'b)
+T
+CL-USER> (equal (third a) '2)
+T
+CL-USER> (equalp (third a) '2.0)
+T
+CL-USER> (defvar b nil)
+B
+CL-USER> (setq b (cons 2 (list 'c 3 () (list 'd 4))))
+(2 C 3 NIL (D 4))
+CL-USER> (last b)
+((D 4))
+CL-USER> (append b (list (last b)))
+(2 C 3 NIL (D 4) ((D 4)))
 ```
 ## Варіант 5
 <p align="center">
