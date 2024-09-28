@@ -41,18 +41,30 @@
 Об'єднайте створений список з одним із його непустих підсписків. Для цього
 використайте функцію APPEND.
 ```lisp
+
+;1
 CL-USER> (defvar a nil)
 A
 CL-USER> (setq a (cons 'b (list 4 2 (list 2 3 ()))))
 (B 4 2 (2 3 NIL))
+
+;2
 CL-USER> (car a)
 B
+
+;3
 CL-USER> (cdr a)
 (4 2 (2 3 NIL))
+
+;4
 CL-USER> (third a)
 2
+
+;5
 CL-USER> (last a)
 ((2 3 NIL))
+
+;6
 CL-USER>  (atom 2)
 T
 CL-USER> (atom 'b)
@@ -65,6 +77,8 @@ CL-USER>  (listp a)
 T
 CL-USER> (listp 2)
 NIL
+
+;7
 CL-USER>(eq 'a 'a)
 T
 CL-USER> (eq a a)
@@ -83,6 +97,8 @@ CL-USER> (equal (third a) '2)
 T
 CL-USER> (equalp (third a) '2.0)
 T
+
+;8
 CL-USER> (defvar b nil)
 B
 CL-USER> (setq b (cons 2 (list 'c 3 () (list 'd 4))))
