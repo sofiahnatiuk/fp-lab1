@@ -105,8 +105,8 @@ CL-USER> (setq b (cons 2 (list 'c 3 () (list 'd 4))))
 (2 C 3 NIL (D 4))
 CL-USER> (last b)
 ((D 4))
-CL-USER> (append b (last b))
-(2 C 3 NIL (D 4) (D 4))
+CL-USER> (append b (car (last b)))
+(2 C 3 NIL (D 4) D 4)
 ``` 
 ## Варіант 5
 <p align="center">
